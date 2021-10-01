@@ -31,7 +31,7 @@ pipeline{
 
         stage("Upload Artifacts to Nexus"){
             steps {
-                nexusArtifactUploader artifacts: [[artifactId: 'my-app', classifier: '', file: 'target/my-app-3.0-SNAPSHOT.war', type: 'war']], credentialsId: 'nexus', groupId: 'com.mycompany.app', nexusUrl: '192.168.29.70:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '3.0-SNAPSHOT'
+                nexusArtifactUploader artifacts: [[artifactId: 'my-app', classifier: '', file: 'target/my-app-3.0-SNAPSHOT.jar', type: 'jar']], credentialsId: 'nexus', groupId: 'com.mycompany.app', nexusUrl: '192.168.29.70:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'maven-snapshots', version: '3.0-SNAPSHOT'
             }
        
         }
