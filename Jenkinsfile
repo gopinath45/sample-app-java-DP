@@ -3,7 +3,7 @@ pipeline{
         label "linux"
     }
     environment {
-        mvnHome = "MAVEN3"
+        mvnHome = tool "MAVEN3"
         }
     stages{
         
