@@ -7,13 +7,6 @@ pipeline{
         }
     stages{
         
-        stage("SCM Checkout"){
-            steps {
-               git clone https://github.com/gopinath45/sample-app-java-DP.git
-            }
-       
-        }
-
         stage("Code Quality Scan"){
             steps {
               withSonarQubeEnv('My SonarQube Server') {
