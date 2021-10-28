@@ -27,6 +27,11 @@ pipeline{
             steps {
                 sh "${mvnHome}/bin/mvn -f pom.xml clean install"
             }
+            post {
+                success {
+                    jacoco()
+                }
+            }
         }
 
         stage("Upload Artifacts to Nexus"){
